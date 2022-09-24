@@ -4,6 +4,9 @@ import { Box, Typography,Grid,styled, } from '@mui/material'
 import theme from '../theme'
 import Image from '../../images/image2.jpg'
 import ContactForm from './ContactForm'
+import Aos from "aos"
+import "aos/dist/aos.css"
+import { useEffect } from 'react'
 const ContactWrapper=styled('div')(({ theme })=>({
   width:"100%",
   background:`linear-gradient(to left, #C12D24,black )`,
@@ -28,6 +31,12 @@ const Decorator=styled(Box)(({ theme })=>({
   }}
   ))
 const Contact = () => {
+  useEffect(() => {
+   
+    Aos.init({duration:2000});
+  
+    
+  }, [])
   return (
     <ContactWrapper id="contact" style={{ width:"100%",bgcolor:`${theme.colors.base1}`,marginTop:"0"}}>
     <Box sx={{ width:"100%",paddingTop:"60px"}}>
@@ -57,7 +66,7 @@ const Contact = () => {
         </Grid>
         <Grid container justifyContent="center" spacing={2} sx={{marginTop:"25px"}} >
         <Grid item justifyContent="center" xs={0}  sx={{width:"50%", display:{xs:"none",sm:"block"}}} sm={5} md={4} >
-            <Box  sx={{marginLeft:"70px"}}  ><img src={Image} style={{height:"440px",minWidth:"300px"}}></img></Box>
+            <Box  sx={{marginLeft:"70px"}}  ><img src={Image} data-aos="fade-right" style={{height:"440px",minWidth:"300px"}}></img></Box>
             </Grid>
             <Grid item xs ={12} sm={7} md={8} sx={{width:"50%"}} ><ContactForm></ContactForm></Grid>
            
