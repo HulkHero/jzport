@@ -4,14 +4,21 @@ import { styled } from "@mui/material/styles";
 import Image from "../images/banner.PNG"
 import NavAppBar from "./AppBar";
 import ArrowDownwardRoundedIcon from '@mui/icons-material/ArrowDownwardRounded';
-
+import Image3 from "../images/img5c.jpg"
 const HeaderWrapper = styled(Box)(({ theme }) => ({
   width: '100%',
-  minHeight: '90vh',
-    height:"auto",
-    background: `linear-gradient(to left, rgb(207, 66, 53,0.5) ,black),url(${Image})`,
-    backgroundSize:"cover",
-    backgroundRepeat: 'no-repeat',
+
+  minHeight:"90vh",
+          height:"auto",
+          background: `linear-gradient(to left, rgb(207, 66, 53,0.5) ,black),url(${Image})`,
+          backgroundSize:"cover",
+       "@media (max-width:500px)" :{
+        
+        background: `linear-gradient(to left, rgb(207, 66, 53,0.5) ,black),url(${Image3})`
+       } ,
+          backgroundRepeat: 'no-repeat',
+  
+    
   }));
 const HeaderContainer=styled(Box)(({ theme })=>({
   width: '80%',
@@ -66,7 +73,9 @@ const Header=()=>{
     return(
         <>  
         
-        <HeaderWrapper>
+        <HeaderWrapper sx={{
+          
+        }}>
         <NavAppBar/>
         <HeaderContainer>
           <Typography variant="h3" color="#fff" component="h4" sx={{maxHeight:"200px" ,fontSize:{xs:"1.5rem",sm:"2.5rem"},}}>We Provide {" "} 
