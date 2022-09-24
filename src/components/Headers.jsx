@@ -4,7 +4,7 @@ import { styled } from "@mui/material/styles";
 import Image from "../images/banner.PNG"
 import NavAppBar from "./AppBar";
 import ArrowDownwardRoundedIcon from '@mui/icons-material/ArrowDownwardRounded';
-import Typed from "react-typed"
+
 const HeaderWrapper = styled(Box)(({ theme }) => ({
   width: '100%',
   minHeight: '90vh',
