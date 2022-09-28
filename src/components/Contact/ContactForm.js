@@ -56,7 +56,7 @@ const ContactForm = () => {
     e.preventDefault();
     console.log("user",user)
   console.log(form.current)
-    emailjs.sendForm('service_v998a9x', 'template_o6lkv6s',form.current, 'keF1nJlnn208nArdw')
+    emailjs.sendForm('service_dmroshi', 'template_u138ixn',form.current, 'nkEh-MOeJodOffXpQ')
       .then((result) => {
           console.log(result.text);
           setText("sent")
@@ -65,7 +65,7 @@ const ContactForm = () => {
       }, (error) => {
           console.log(error.text);
       });
-      e.target.reset()
+     
   };
   return (
    
